@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <!--
+    Meta base, ho messo UTF-8 perché serve per accenti italiani come Ferrara
+    - viewport per il comportamento responsive sui dispositivi mobili
+  -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pagina informativa e download report di sostenibilità di Bonifiche Ferraresi." />
+
+    <!-- Titolo visualizzato nella scheda del browser -->
+    <title>Bonifiche Ferraresi - Report di Sostenibilità</title>
+
+    <!-- Collegamento al foglio di stile principale -->
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+  </head>
+  <body>
+    <!--
+    Header/Hero:
+    Sezione header con classe "hero" per evidenziare l'introduzione alla pagina.
+     - Contenuto centrato in una "container" per limitare la larghezza e migliorare la leggibilità.
+  -->
+    <header class="hero">
+      <div class="container">
+        <p class="eyebrow">
+          Project Work 17 · Tecnologia web per la sostenibilità d'impresa
+        </p>
+        <h1>
+          Bonifiche Ferraresi: sostenibilità e trasparenza nel settore agricolo
+        </h1>
+        <p class="subtitle">
+          Questa pagina presenta in modo sintetico le principali iniziative
+          ambientali, sociali e di governance e consente il download diretto dei
+          report di sostenibilità dell'azienda.
+        </p>
+
+        <!--
+        Link di ancoraggio interno:
+        porta direttamente alla sezione con i file scaricabili.
+      -->
+        <a
+          class="cta"
+          href="#download"
+          >Vai ai report</a
+        >
+      </div>
+    </header>
+
+    <!--
+    Contenuto principale della pagina.
+    Uso di <main> per migliorare semantica e navigazione assistiva.
+  -->
+    <main>
+      <!--
+      Sezione 1: contesto aziendale.
+      Layout a due colonne: testo descrittivo + card laterale con obiettivi della pagina.
+    -->
+      <section
+        class="section"
+        id="azienda">
+        <div class="container grid">
+          <article>
+            <h2>Contesto aziendale</h2>
+            <p>
+              Bonifiche Ferraresi è una realtà italiana focalizzat
+              principalmente sul settore agricolo, con attività legate alla
+              gestione responsabile dei terreni, alla produzione primaria e allo
+              sviluppo di pratiche orientate alla sostenibilità lungo la filiera
+              agroalimentare.
+            </p>
+            <p>
+              Nel quadro del settore primario, la responsabilità ambientale
+              assume un ruolo cruciale: uso consapevole dell'acqua e del suolo,
+              tutela della biodiversita, riduzione degli impatti e attenzione ai
+              territori in cui l'impresa opera.
+            </p>
+          </article>
+
+          <!--
+          Card informativa laterale:
+          riepiloga in tre punti lo scopo didattico/funzionale della pagina.
+        -->
+          <aside class="card">
+            <h3>Obiettivo della pagina</h3>
+            <ul>
+              <li>
+                Rendere accessibili le informazioni chiave sulla sostenibilità;
+              </li>
+              <li>Favorire il download dei report in un unico punto;</li>
+              <li>Offrire una struttura semplice, chiara e leggibile.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!--
+      Sezione 2: sintesi attività ESG.
+      Tre card parallele per facilitare la lettura veloce (Ambiente, Sociale, Governance).
+    -->
+      <section
+        class="section alt"
+        id="attivita">
+        <div class="container">
+          <h2>Attività principali per la sostenibilità</h2>
+          <div class="cards">
+            <!-- Card Ambiente -->
+            <article class="card">
+              <h3>Ambiente</h3>
+              <p>
+                Iniziative orientate all'agricoltura responsabile, all'uso
+                efficiente delle risorse idriche, alla tutela del suolo e al
+                monitoraggio dell'impatto ambientale dei processi produttivi.
+              </p>
+            </article>
+
+            <!-- Card Sociale -->
+            <article class="card">
+              <h3>Sociale</h3>
+              <p>
+                Programmi dedicati a sicurezza sul lavoro, formazione del
+                personale, relazioni con comunità locali e supporto ai territori
+                coinvolti dalle attività operative.
+              </p>
+            </article>
+
+            <!-- Card Governance -->
+            <article class="card">
+              <h3>Governance</h3>
+              <p>
+                Modelli decisionali improntati a trasparenza, gestione del
+                rischio, conformità normativa e rendicontazione periodica verso
+                stakeholder interni ed esterni.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--
+      Sezione 3: download report.
+      È la funzione principale richiesta dalla traccia.
+      I link puntano alla cartella locale /reports.
+    -->
+      <section
+        class="section"
+        id="download">
+        <div class="container">
+          <h2>Download report di sostenibilità</h2>
+          <p class="subtitle small">
+            Inserisci i PDF ufficiali nella cartella
+            <strong>web/reports</strong> mantenendo i nomi indicati qui sotto,
+            oppure aggiorna i link in base ai file disponibili.
+          </p>
+
+          <!--
+          Lista semantica di link scaricabili:
+          - role="list" / role="listitem" per rinforzo semantico
+          - attributo download per suggerire il download del file
+        -->
+          <div
+            class="download-list"
+            role="list"
+            aria-label="Elenco report scaricabili">
+            <!-- Report annuale 2021 -->
+            <a
+              role="listitem"
+              class="download-item"
+              href="reports/bf-sustainability-report-2021.pdf"
+              download>
+              <span>Report di sostenibilità 2021 (PDF)</span>
+              <span class="badge">Download</span>
+            </a>
+
+            <!-- Report annuale 2022 -->
+            <a
+              role="listitem"
+              class="download-item"
+              href="reports/bf-sustainability-report-2022.pdf"
+              download>
+              <span>Report di sostenibilità 2022 (PDF)</span>
+              <span class="badge">Download</span>
+            </a>
+
+            <!-- Report annuale 2023 -->
+            <a
+              role="listitem"
+              class="download-item"
+              href="reports/bf-sustainability-report-2023.pdf"
+              download>
+              <span>Report di sostenibilità 2023 (PDF)</span>
+              <span class="badge">Download</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--
+    Footer: chiusura pagina con riferimento didattico al project work.
+  -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Elaborato didattico per il Project Work 17 · CdS Informatica per le
+          Aziende Digitali (L-31).
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

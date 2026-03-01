@@ -1,0 +1,221 @@
+/*
+  Variabili globali di progetto
+  Tutti i colori principali sono centralizzati qui,
+  così da facilitare eventuali modifiche
+*/
+:root {
+  --bg: #f7faf8;
+  --surface: #ffffff;
+  --text: #172026;
+  --muted: #5f6b73;
+  --primary: #0f766e;
+  --primary-dark: #0b5e58;
+  --border: #d9e2e0;
+}
+
+/*
+  box-sizing: border-box rende più visibile il calcolo di larghezza / altezza includendo padding e border.
+*/
+* {
+  box-sizing: border-box;
+}
+
+/*
+  Stili base documento:
+  .rimuove margini di default del browser
+  .definisce font leggibile e confortevole per il web
+  .imposta colori principali di testo e sfondo
+*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.8;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/*
+  Contenitore responsivo:
+  .larghezza massima desktop 1100px
+  .su schermi piccoli usa 92vw
+  .margini automatici
+*/
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+/*
+  Hero iniziale:
+  verde coerente con tema sostenibilità.
+  padding ampio per dare spazio al titolo principale.
+*/
+.hero {
+  background: linear-gradient(130deg, #0f766e 0%, #115e59 50%, #0b3b3a 100%);
+  color: #fff;
+  padding: 70px 0;
+}
+
+/* Testo di contesto superiore */
+.eyebrow {
+  margin: 0 0 10px;
+  opacity: 0.88;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+/* Regole comuni ai titoli principali */
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.4;
+}
+
+/*
+  Dimensione h1 fluida: si adatta alla larghezza della viewport.
+*/
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+/* Sottotitolo con larghezza ottimizzata per lettura */
+.subtitle {
+  max-width: 75ch;
+  margin: 0 0 22px;
+}
+
+/* Variante small usata nella sezione download */
+.subtitle.small {
+  color: var(--muted);
+}
+
+/*
+  Pulsante CTA:
+  contrasto elevato su hero scuro,
+  stile semplice, immediato e riconoscibile.
+*/
+.cta {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #fff;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+/* Spaziatura verticale standard tra le sezioni */
+.section {
+  padding: 55px 0;
+}
+
+/* Sfondo alternativo per distinguere il blocco attività */
+.section.alt {
+  background: #eef4f2;
+}
+
+/*
+  Griglia 2 colonne:
+  colonna contenuto principale e colonna laterale di infromaione.
+*/
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+/*
+  Griglia card:
+  tre colonne uguali su desktop.
+*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/*
+  Componente card riutilizzata in più sezioni.
+  Superficie bianca, bordo leggero e angoli arrotondati.
+*/
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+}
+
+/* Spaziatura lista interna alla card laterale */
+.card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Wrapper lista download */
+.download-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/*
+  Elemento singolo di download:
+  flex per separare testo report e badge di azione.
+*/
+.download-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+/*
+  Feedback visuale su hover e/o focus:
+  utile sia per mouse sia per tastiera.
+*/
+.download-item:hover,
+.download-item:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* Badge per rendere evidente l'azione Download */
+.badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* Footer sobrio con seprazione superiore */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0 28px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/*
+  Breakpoint mobile/tablet:
+  per migliorare leggibilità su schermi stretti.
+*/
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
